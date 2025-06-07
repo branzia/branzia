@@ -1,15 +1,7 @@
-
----
-
-## ✅ 2. Landing Page Copy (For Vercel / Personal Website)
-
-```txt
----
-title: Branzia – Free Laravel E-Commerce Kit
-tagline: Launch your store fast — with Laravel backend & mobile app frontend
----
+# 🛍️ Branzia – Free Laravel E-Commerce Starter Kit with Mobile App
 
 Branzia is a modern, developer-first e-commerce solution built using Laravel. It's open-source, cleanly structured, and mobile-ready — giving you everything you need to set up an online store quickly and affordably.
+
 
 ### What You Get:
 - ✅ Laravel-based backend with RESTful APIs
