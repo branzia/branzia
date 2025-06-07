@@ -27,7 +27,10 @@ We offer optional paid services for:
 
 ---
 
-📦 [View on GitHub](https://github.com/branzia/branzia.git)
+## 📫 Connect with Me
+- [View on GitHub](https://github.com/branzia/branzia.git)
+- [LinkedIn](https://www.linkedin.com/company/branzia)
+- [Get Support](mailto:visvanathan.tech@gmail.com)
 
-
-💬 [Get Support](mailto:visvanathan.tech@gmail.com)
+---
+> Let’s build and learn together. Contributions welcome!
