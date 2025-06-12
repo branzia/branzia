@@ -8,7 +8,7 @@ Branzia is a modern, developer-first e-commerce solution built using Laravel. It
 - ✅ Fully customizable mobile app
 - ✅ Admin dashboard to manage products and orders
 - ✅ Simple design, clean codebase
-- ✅ Stripe and PayPal integration
+- ✅ Stripe and Authorized.net integration
 - ✅ SEO and performance optimized
 
 ### Why Free?

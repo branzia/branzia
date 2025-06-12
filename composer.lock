@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ff5bf509cf3fe492af39848ad11223c1",
+    "content-hash": "0119162b9261804b3e60bbc5ad868506",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -221,6 +221,204 @@
                 }
             ],
             "time": "2025-02-13T20:35:06+00:00"
+        },
+        {
+            "name": "branzia/admin",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "packages/branzia/admin",
+                "reference": "ed56365c4fabc9c4966696041c0446a005ca694d"
+            },
+            "require": {
+                "filament/filament": "3.3",
+                "php": "^8.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Branzia\\Admin\\AdminServiceProvider",
+                        "Branzia\\Admin\\AdminPanelProvider"
+                    ],
+                    "aliases": []
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Branzia\\Admin\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Visvanathan",
+                    "email": "visvanathan.tech@gmail.com"
+                }
+            ],
+            "description": "Branzia Admin Package for Laravel",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "branzia/blueprint",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/branzia/blueprint",
+                "reference": "4ab47b6f5e6d179d055daeac7ab4173df5070821"
+            },
+            "require": {
+                "filament/filament": "3.3",
+                "php": "^8.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Branzia\\Blueprint\\BlueprintServiceProvider"
+                    ],
+                    "aliases": []
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Branzia\\Blueprint\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Visvanathan",
+                    "email": "visvanathan.tech@gmail.com"
+                }
+            ],
+            "description": "Branzia Blueprint package – the foundational layer for Branzia's Laravel packages",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "branzia/catalog",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "packages/branzia/catalog",
+                "reference": "5d832c45ee738807f89411d2e75f9f9d2395fb38"
+            },
+            "require": {
+                "php": "^8.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Branzia\\Catalog\\CatalogServiceProvider",
+                        "Branzia\\Catalog\\CatalogPanelProvider"
+                    ],
+                    "aliases": []
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Branzia\\Catalog\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Visvanathan",
+                    "email": "visvanathan.tech@gmail.com"
+                }
+            ],
+            "description": "Branzia Catalog Package for Laravel",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "branzia/hookable",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/branzia/hookable",
+                "reference": "fedbc8dcb66353198baff83d112837702f9e18f6"
+            },
+            "require": {
+                "php": "^8.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Branzia\\Hookable\\HookableServiceProvider"
+                    ],
+                    "aliases": []
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Branzia\\Hookable\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Hook system for Laravel packages inspired by Filament and WordPress",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "branzia/shop",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "packages/branzia/shop",
+                "reference": "da62824131a29fde33b1de226744e74f38104bc0"
+            },
+            "require": {
+                "branzia/admin": "@dev",
+                "branzia/blueprint": "@dev",
+                "branzia/catalog": "@dev",
+                "branzia/hookable": "@dev",
+                "filament/filament": "3.3",
+                "php": "^8.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Branzia\\Shop\\ShopServiceProvider"
+                    ],
+                    "aliases": []
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Branzia\\Shop\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Visvanathan",
+                    "email": "visvanathan.tech@gmail.com"
+                }
+            ],
+            "description": "Branzia Shop Package for Laravel",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "brick/math",
@@ -2026,16 +2224,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v12.17.0",
+            "version": "v12.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "8729d084510480fdeec9b6ad198180147d4a7f06"
+                "reference": "7d264a0dad2bfc5c154240b38e8ce9b2c4cdd14d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/8729d084510480fdeec9b6ad198180147d4a7f06",
-                "reference": "8729d084510480fdeec9b6ad198180147d4a7f06",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/7d264a0dad2bfc5c154240b38e8ce9b2c4cdd14d",
+                "reference": "7d264a0dad2bfc5c154240b38e8ce9b2c4cdd14d",
                 "shasum": ""
             },
             "require": {
@@ -2237,7 +2435,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2025-06-03T14:04:18+00:00"
+            "time": "2025-06-10T14:48:34+00:00"
         },
         {
             "name": "laravel/prompts",
@@ -7672,16 +7870,16 @@
         },
         {
             "name": "filp/whoops",
-            "version": "2.18.1",
+            "version": "2.18.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "8fcc6a862f2e7b94eb4221fd0819ddba3d30ab26"
+                "reference": "89dabca1490bc77dbcab41c2b20968c7e44bf7c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/8fcc6a862f2e7b94eb4221fd0819ddba3d30ab26",
-                "reference": "8fcc6a862f2e7b94eb4221fd0819ddba3d30ab26",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/89dabca1490bc77dbcab41c2b20968c7e44bf7c3",
+                "reference": "89dabca1490bc77dbcab41c2b20968c7e44bf7c3",
                 "shasum": ""
             },
             "require": {
@@ -7731,7 +7929,7 @@
             ],
             "support": {
                 "issues": "https://github.com/filp/whoops/issues",
-                "source": "https://github.com/filp/whoops/tree/2.18.1"
+                "source": "https://github.com/filp/whoops/tree/2.18.2"
             },
             "funding": [
                 {
@@ -7739,7 +7937,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-06-03T18:56:14+00:00"
+            "time": "2025-06-11T20:42:19+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -8205,23 +8403,23 @@
         },
         {
             "name": "nunomaduro/collision",
-            "version": "v8.8.0",
+            "version": "v8.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nunomaduro/collision.git",
-                "reference": "4cf9f3b47afff38b139fb79ce54fc71799022ce8"
+                "reference": "44ccb82e3e21efb5446748d2a3c81a030ac22bd5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nunomaduro/collision/zipball/4cf9f3b47afff38b139fb79ce54fc71799022ce8",
-                "reference": "4cf9f3b47afff38b139fb79ce54fc71799022ce8",
+                "url": "https://api.github.com/repos/nunomaduro/collision/zipball/44ccb82e3e21efb5446748d2a3c81a030ac22bd5",
+                "reference": "44ccb82e3e21efb5446748d2a3c81a030ac22bd5",
                 "shasum": ""
             },
             "require": {
-                "filp/whoops": "^2.18.0",
-                "nunomaduro/termwind": "^2.3.0",
+                "filp/whoops": "^2.18.1",
+                "nunomaduro/termwind": "^2.3.1",
                 "php": "^8.2.0",
-                "symfony/console": "^7.2.5"
+                "symfony/console": "^7.3.0"
             },
             "conflict": {
                 "laravel/framework": "<11.44.2 || >=13.0.0",
@@ -8229,15 +8427,15 @@
             },
             "require-dev": {
                 "brianium/paratest": "^7.8.3",
-                "larastan/larastan": "^3.2",
-                "laravel/framework": "^11.44.2 || ^12.6",
-                "laravel/pint": "^1.21.2",
-                "laravel/sail": "^1.41.0",
-                "laravel/sanctum": "^4.0.8",
+                "larastan/larastan": "^3.4.2",
+                "laravel/framework": "^11.44.2 || ^12.18",
+                "laravel/pint": "^1.22.1",
+                "laravel/sail": "^1.43.1",
+                "laravel/sanctum": "^4.1.1",
                 "laravel/tinker": "^2.10.1",
-                "orchestra/testbench-core": "^9.12.0 || ^10.1",
-                "pestphp/pest": "^3.8.0",
-                "sebastian/environment": "^7.2.0 || ^8.0"
+                "orchestra/testbench-core": "^9.12.0 || ^10.4",
+                "pestphp/pest": "^3.8.2",
+                "sebastian/environment": "^7.2.1 || ^8.0"
             },
             "type": "library",
             "extra": {
@@ -8300,7 +8498,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2025-04-03T14:33:09+00:00"
+            "time": "2025-06-11T01:04:21+00:00"
         },
         {
             "name": "pestphp/pest",
@@ -10637,8 +10835,14 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "dev",
-    "stability-flags": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "branzia/blueprint": 20,
+        "branzia/shop": 20,
+        "branzia/hookable": 20,
+        "branzia/admin": 20,
+        "branzia/catalog": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
