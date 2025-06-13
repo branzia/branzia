@@ -17,3 +17,6 @@
 [submodule "packages/branzia/shop"]
 	path = packages/branzia/shop
 	url = https://github.com/branzia/shop
+[submodule "packages/branzia/blueprint"]
+	path = packages/branzia/blueprint
+	url = https://github.com/branzia/blueprint
