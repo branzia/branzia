@@ -14,3 +14,6 @@
 [submodule "packages/branzia/hookable"]
 	path = packages/branzia/hookable
 	url = https://github.com/branzia/hookable
+[submodule "packages/branzia/shop"]
+	path = packages/branzia/shop
+	url = https://github.com/branzia/shop
