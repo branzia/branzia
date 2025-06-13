@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0119162b9261804b3e60bbc5ad868506",
+    "content-hash": "cac07eb5740bb96443545e0d303194fd",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -312,6 +312,7 @@
                 "reference": "5d832c45ee738807f89411d2e75f9f9d2395fb38"
             },
             "require": {
+                "branzia/tax": "@dev",
                 "php": "^8.2"
             },
             "type": "library",
@@ -389,6 +390,7 @@
                 "branzia/blueprint": "@dev",
                 "branzia/catalog": "@dev",
                 "branzia/hookable": "@dev",
+                "branzia/tax": "@dev",
                 "filament/filament": "3.3",
                 "php": "^8.2"
             },
@@ -416,6 +418,47 @@
                 }
             ],
             "description": "Branzia Shop Package for Laravel",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "branzia/tax",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/branzia/tax",
+                "reference": "55a4c6bcd0e961087b215c50e2156f59890e8f8d"
+            },
+            "require": {
+                "filament/filament": "3.3",
+                "php": "^8.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Branzia\\Tax\\TaxServiceProvider"
+                    ],
+                    "aliases": []
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Branzia\\Tax\\": "src/",
+                    "Branzia\\Tax\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Visvanathan",
+                    "email": "visvanathan.tech@gmail.com"
+                }
+            ],
+            "description": "Branzia Tax Package for Laravel",
             "transport-options": {
                 "relative": true
             }
@@ -10841,6 +10884,7 @@
         "branzia/shop": 20,
         "branzia/hookable": 20,
         "branzia/admin": 20,
+        "branzia/tax": 20,
         "branzia/catalog": 20
     },
     "prefer-stable": true,
