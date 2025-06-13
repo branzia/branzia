@@ -1,3 +1,6 @@
 [submodule "packages/branzia/admin"]
 	path = packages/branzia/admin
 	url = https://github.com/branzia/admin
+[submodule "packages/branzia/catalog"]
+	path = packages/branzia/catalog
+	url = https://github.com/branzia/catalog
