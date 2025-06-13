@@ -4,3 +4,12 @@
 [submodule "packages/branzia/catalog"]
 	path = packages/branzia/catalog
 	url = https://github.com/branzia/catalog
+[submodule "packages/branzia/tax"]
+	path = packages/branzia/tax
+	url = https://github.com/branzia/tax
+[submodule "packages/branzia/shop"]
+	path = packages/branzia/shop
+	url = https://github.com/branzia/shop
+[submodule "packages/branzia/checkout"]
+	path = packages/branzia/checkout
+	url = https://github.com/branzia/checkout
