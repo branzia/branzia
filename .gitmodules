@@ -11,3 +11,6 @@
 	path = packages/branzia/checkout
 	url = https://github.com/branzia/checkout
 
+[submodule "packages/branzia/hookable"]
+	path = packages/branzia/hookable
+	url = https://github.com/branzia/hookable
