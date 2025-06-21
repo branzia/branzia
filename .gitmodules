@@ -23,3 +23,36 @@
 [submodule "packages/branzia/customer"]
 	path = packages/branzia/customer
 	url = https://github.com/branzia/customer
+[submodule "packages/branzia/shipping"]
+	path = packages/branzia/shipping
+	url = https://github.com/branzia/shipping
+[submodule "packages/branzia/payment"]
+	path = packages/branzia/payment
+	url = https://github.com/branzia/payment
+[submodule "packages/branzia/sales"]
+	path = packages/branzia/sales
+	url = https://github.com/branzia/sales
+[submodule "packages/branzia/blog"]
+	path = packages/branzia/blog
+	url = https://github.com/branzia/blog
+[submodule "packages/branzia/cms"]
+	path = packages/branzia/cms
+	url = https://github.com/branzia/cms
+[submodule "packages/branzia/razorpay"]
+	path = packages/branzia/razorpay
+	url = https://github.com/branzia/razorpay
+[submodule "packages/branzia/stripe"]
+	path = packages/branzia/stripe
+	url = https://github.com/branzia/stripe
+[submodule "packages/branzia/authorizenet"]
+	path = packages/branzia/authorizenet
+	url = https://github.com/branzia/authorizenet
+[submodule "packages/branzia/wishlist"]
+	path = packages/branzia/wishlist
+	url = https://github.com/branzia/wishlist
+[submodule "packages/branzia/review"]
+	path = packages/branzia/review
+	url = https://github.com/branzia/review
+[submodule "packages/branzia/newsletter"]
+	path = packages/branzia/newsletter
+	url = https://github.com/branzia/newsletter

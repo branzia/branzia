@@ -4,8 +4,74 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cac07eb5740bb96443545e0d303194fd",
+    "content-hash": "1c7af404fdc93c6dda1728e89e67973c",
     "packages": [
+        {
+            "name": "15web/filament-tree",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/15web/filament-tree.git",
+                "reference": "a9fd9d8be83691db54c2723d2fa37712b10fd63f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/15web/filament-tree/zipball/a9fd9d8be83691db54c2723d2fa37712b10fd63f",
+                "reference": "a9fd9d8be83691db54c2723d2fa37712b10fd63f",
+                "shasum": ""
+            },
+            "require": {
+                "filament/support": "^3.2",
+                "illuminate/contracts": "^11.0 || ^12.0",
+                "kalnoy/nestedset": "^6.0.5",
+                "php": "^8.2",
+                "spatie/laravel-package-tools": "^1.14.0"
+            },
+            "require-dev": {
+                "driftingly/rector-laravel": "^2.0",
+                "ergebnis/composer-normalize": "^2.47",
+                "friendsofphp/php-cs-fixer": "^3.73",
+                "orchestra/testbench": "^9.0 || ^10.0",
+                "rector/rector": "^2.0",
+                "webmozart/assert": "^1.11"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Studio15\\FilamentTree\\FilamentTreeServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Studio15\\FilamentTree\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "15web",
+                    "email": "info@15web.ru",
+                    "homepage": "https://www.15web.ru"
+                }
+            ],
+            "description": "Tree builder for Eloquent models",
+            "homepage": "https://github.com/15web/filament-tree",
+            "keywords": [
+                "filament",
+                "laravel",
+                "tree"
+            ],
+            "support": {
+                "issues": "https://github.com/15web/filament-tree/issues",
+                "source": "https://github.com/15web/filament-tree/tree/1.0.3"
+            },
+            "time": "2025-05-23T07:06:49+00:00"
+        },
         {
             "name": "anourvalar/eloquent-serialize",
             "version": "1.3.3",
@@ -224,11 +290,11 @@
         },
         {
             "name": "branzia/admin",
-            "version": "dev-master",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "packages/branzia/admin",
-                "reference": "ed56365c4fabc9c4966696041c0446a005ca694d"
+                "reference": "0a280403670eb6d0dc010fec65e741c900c657c8"
             },
             "require": {
                 "filament/filament": "3.3",
@@ -238,8 +304,7 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "Branzia\\Admin\\AdminServiceProvider",
-                        "Branzia\\Admin\\AdminPanelProvider"
+                        "Branzia\\Admin\\AdminServiceProvider"
                     ],
                     "aliases": []
                 }
@@ -259,6 +324,41 @@
                 }
             ],
             "description": "Branzia Admin Package for Laravel",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "branzia/blog",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/branzia/blog",
+                "reference": "b1406b32cecdb6688a511bebe75c5d76e40cbaa3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Branzia\\Blog\\BlogServiceProvider"
+                    ],
+                    "aliases": []
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Branzia\\Blog\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Visvanathan D",
+                    "email": "visvanathan.tech@gmail.com"
+                }
+            ],
             "transport-options": {
                 "relative": true
             }
@@ -305,13 +405,14 @@
         },
         {
             "name": "branzia/catalog",
-            "version": "dev-master",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "packages/branzia/catalog",
-                "reference": "5d832c45ee738807f89411d2e75f9f9d2395fb38"
+                "reference": "4f5865504904737add63d38d84eadca7eb25be16"
             },
             "require": {
+                "15web/filament-tree": "^1.0",
                 "branzia/tax": "@dev",
                 "php": "^8.2"
             },
@@ -320,7 +421,7 @@
                 "laravel": {
                     "providers": [
                         "Branzia\\Catalog\\CatalogServiceProvider",
-                        "Branzia\\Catalog\\CatalogPanelProvider"
+                        "Studio15\\FilamentTree\\FilamentTreeServiceProvider"
                     ],
                     "aliases": []
                 }
@@ -345,8 +446,48 @@
             }
         },
         {
-            "name": "branzia/hookable",
+            "name": "branzia/customer",
             "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/branzia/customer",
+                "reference": "490ff52a8b6a0c2bbe06ea0a1627f662c72014f8"
+            },
+            "require": {
+                "branzia/tax": "@dev",
+                "php": "^8.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Branzia\\Customer\\CustomerServiceProvider"
+                    ],
+                    "aliases": []
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Branzia\\Customer\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Visvanathan",
+                    "email": "visvanathan.tech@gmail.com"
+                }
+            ],
+            "description": "Branzia Customer Package for Laravel",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "branzia/hookable",
+            "version": "dev-0a5fc83082bf1eb67b580119111a2f260391226f",
             "dist": {
                 "type": "path",
                 "url": "packages/branzia/hookable",
@@ -378,18 +519,150 @@
             }
         },
         {
-            "name": "branzia/shop",
-            "version": "dev-master",
+            "name": "branzia/payment",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
-                "url": "packages/branzia/shop",
-                "reference": "da62824131a29fde33b1de226744e74f38104bc0"
+                "url": "packages/branzia/payment",
+                "reference": "0b72c30491e3376fa16d1fcf92b44eaf2c1e4b13"
+            },
+            "require": {
+                "branzia/tax": "@dev",
+                "php": "^8.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Branzia\\Payment\\PaymentServiceProvider"
+                    ],
+                    "aliases": []
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Branzia\\Payment\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Visvanathan",
+                    "email": "visvanathan.tech@gmail.com"
+                }
+            ],
+            "description": "Branzia Payment Package for Laravel",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "branzia/sales",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/branzia/sales",
+                "reference": "965a23cb8e8f5b8de4c20b927408665c4059555d"
             },
             "require": {
                 "branzia/admin": "@dev",
                 "branzia/blueprint": "@dev",
                 "branzia/catalog": "@dev",
+                "branzia/customer": "@dev",
                 "branzia/hookable": "@dev",
+                "branzia/payment": "@dev",
+                "branzia/shipping": "@dev",
+                "branzia/tax": "@dev",
+                "filament/filament": "3.3",
+                "php": "^8.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Branzia\\Sales\\SalesServiceProvider"
+                    ],
+                    "aliases": []
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Branzia\\Sales\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Visvanathan",
+                    "email": "visvanathan.tech@gmail.com"
+                }
+            ],
+            "description": "Branzia Sales Package for Laravel",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "branzia/shipping",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/branzia/shipping",
+                "reference": "1722ccebcf81fbf736eaf995d0395b9d0d298b4d"
+            },
+            "require": {
+                "branzia/tax": "@dev",
+                "php": "^8.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Branzia\\Shipping\\ShippingServiceProvider"
+                    ],
+                    "aliases": []
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Branzia\\Shipping\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Visvanathan",
+                    "email": "visvanathan.tech@gmail.com"
+                }
+            ],
+            "description": "Branzia Shipping Package for Laravel",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "branzia/shop",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/branzia/shop",
+                "reference": "ddb268e7e0b8097da65580aa2a47c0455d92b7ef"
+            },
+            "require": {
+                "branzia/admin": "@dev",
+                "branzia/blueprint": "@dev",
+                "branzia/catalog": "@dev",
+                "branzia/customer": "@dev",
+                "branzia/hookable": "@dev",
+                "branzia/payment": "@dev",
+                "branzia/sales": "@dev",
+                "branzia/shipping": "@dev",
                 "branzia/tax": "@dev",
                 "filament/filament": "3.3",
                 "php": "^8.2"
@@ -428,7 +701,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/branzia/tax",
-                "reference": "55a4c6bcd0e961087b215c50e2156f59890e8f8d"
+                "reference": "acc05f3aacc17aef2cc3f80a506d5bec09d5746a"
             },
             "require": {
                 "filament/filament": "3.3",
@@ -445,8 +718,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Branzia\\Tax\\": "src/",
-                    "Branzia\\Tax\\Database\\Seeders\\": "database/seeders/"
+                    "Branzia\\Tax\\": "src/"
                 }
             },
             "license": [
@@ -774,16 +1046,16 @@
         },
         {
             "name": "doctrine/dbal",
-            "version": "4.2.3",
+            "version": "4.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "33d2d7fe1269b2301640c44cf2896ea607b30e3e"
+                "reference": "b37d160498ea91a2382a2ebe825c4ea6254fc0ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/33d2d7fe1269b2301640c44cf2896ea607b30e3e",
-                "reference": "33d2d7fe1269b2301640c44cf2896ea607b30e3e",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/b37d160498ea91a2382a2ebe825c4ea6254fc0ec",
+                "reference": "b37d160498ea91a2382a2ebe825c4ea6254fc0ec",
                 "shasum": ""
             },
             "require": {
@@ -793,15 +1065,15 @@
                 "psr/log": "^1|^2|^3"
             },
             "require-dev": {
-                "doctrine/coding-standard": "12.0.0",
+                "doctrine/coding-standard": "13.0.0",
                 "fig/log-test": "^1",
                 "jetbrains/phpstorm-stubs": "2023.2",
-                "phpstan/phpstan": "2.1.1",
-                "phpstan/phpstan-phpunit": "2.0.3",
+                "phpstan/phpstan": "2.1.17",
+                "phpstan/phpstan-phpunit": "2.0.6",
                 "phpstan/phpstan-strict-rules": "^2",
-                "phpunit/phpunit": "10.5.39",
-                "slevomat/coding-standard": "8.13.1",
-                "squizlabs/php_codesniffer": "3.10.2",
+                "phpunit/phpunit": "10.5.46",
+                "slevomat/coding-standard": "8.16.2",
+                "squizlabs/php_codesniffer": "3.13.1",
                 "symfony/cache": "^6.3.8|^7.0",
                 "symfony/console": "^5.4|^6.3|^7.0"
             },
@@ -860,7 +1132,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/dbal/issues",
-                "source": "https://github.com/doctrine/dbal/tree/4.2.3"
+                "source": "https://github.com/doctrine/dbal/tree/4.2.4"
             },
             "funding": [
                 {
@@ -876,7 +1148,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-03-07T18:29:05+00:00"
+            "time": "2025-06-15T23:15:01+00:00"
         },
         {
             "name": "doctrine/deprecations",
@@ -2203,6 +2475,69 @@
             "time": "2025-02-03T10:55:03+00:00"
         },
         {
+            "name": "kalnoy/nestedset",
+            "version": "v6.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lazychaser/laravel-nestedset.git",
+                "reference": "3cfc56a9759fb592bc903056166bfc0867f9e679"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lazychaser/laravel-nestedset/zipball/3cfc56a9759fb592bc903056166bfc0867f9e679",
+                "reference": "3cfc56a9759fb592bc903056166bfc0867f9e679",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "^7.0|^8.0|^9.0|^10.0|^11.0|^12.0",
+                "illuminate/events": "^7.0|^8.0|^9.0|^10.0|^11.0|^12.0",
+                "illuminate/support": "^7.0|^8.0|^9.0|^10.0|^11.0|^12.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "7.*|8.*|9.*|^10.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Kalnoy\\Nestedset\\NestedSetServiceProvider"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-master": "v5.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Kalnoy\\Nestedset\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Kalnoy",
+                    "email": "lazychaser@gmail.com"
+                }
+            ],
+            "description": "Nested Set Model for Laravel 5.7 and up",
+            "keywords": [
+                "database",
+                "hierarchy",
+                "laravel",
+                "nested sets",
+                "nsm"
+            ],
+            "support": {
+                "issues": "https://github.com/lazychaser/laravel-nestedset/issues",
+                "source": "https://github.com/lazychaser/laravel-nestedset/tree/v6.0.6"
+            },
+            "time": "2025-04-22T19:38:02+00:00"
+        },
+        {
             "name": "kirschbaum-development/eloquent-power-joins",
             "version": "4.2.4",
             "source": {
@@ -2267,16 +2602,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v12.18.0",
+            "version": "v12.19.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "7d264a0dad2bfc5c154240b38e8ce9b2c4cdd14d"
+                "reference": "97c581cb23bdc3147aab0d5087b19167d329991e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/7d264a0dad2bfc5c154240b38e8ce9b2c4cdd14d",
-                "reference": "7d264a0dad2bfc5c154240b38e8ce9b2c4cdd14d",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/97c581cb23bdc3147aab0d5087b19167d329991e",
+                "reference": "97c581cb23bdc3147aab0d5087b19167d329991e",
                 "shasum": ""
             },
             "require": {
@@ -2478,7 +2813,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2025-06-10T14:48:34+00:00"
+            "time": "2025-06-17T23:44:27+00:00"
         },
         {
             "name": "laravel/prompts",
@@ -3556,16 +3891,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "3.9.1",
+            "version": "3.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CarbonPHP/carbon.git",
-                "reference": "ced71f79398ece168e24f7f7710462f462310d4d"
+                "reference": "c1397390dd0a7e0f11660f0ae20f753d88c1f3d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CarbonPHP/carbon/zipball/ced71f79398ece168e24f7f7710462f462310d4d",
-                "reference": "ced71f79398ece168e24f7f7710462f462310d4d",
+                "url": "https://api.github.com/repos/CarbonPHP/carbon/zipball/c1397390dd0a7e0f11660f0ae20f753d88c1f3d9",
+                "reference": "c1397390dd0a7e0f11660f0ae20f753d88c1f3d9",
                 "shasum": ""
             },
             "require": {
@@ -3573,9 +3908,9 @@
                 "ext-json": "*",
                 "php": "^8.1",
                 "psr/clock": "^1.0",
-                "symfony/clock": "^6.3 || ^7.0",
+                "symfony/clock": "^6.3.12 || ^7.0",
                 "symfony/polyfill-mbstring": "^1.0",
-                "symfony/translation": "^4.4.18 || ^5.2.1|| ^6.0 || ^7.0"
+                "symfony/translation": "^4.4.18 || ^5.2.1 || ^6.0 || ^7.0"
             },
             "provide": {
                 "psr/clock-implementation": "1.0"
@@ -3583,14 +3918,13 @@
             "require-dev": {
                 "doctrine/dbal": "^3.6.3 || ^4.0",
                 "doctrine/orm": "^2.15.2 || ^3.0",
-                "friendsofphp/php-cs-fixer": "^3.57.2",
+                "friendsofphp/php-cs-fixer": "^3.75.0",
                 "kylekatarnls/multi-tester": "^2.5.3",
-                "ondrejmirtes/better-reflection": "^6.25.0.4",
                 "phpmd/phpmd": "^2.15.0",
-                "phpstan/extension-installer": "^1.3.1",
-                "phpstan/phpstan": "^1.11.2",
-                "phpunit/phpunit": "^10.5.20",
-                "squizlabs/php_codesniffer": "^3.9.0"
+                "phpstan/extension-installer": "^1.4.3",
+                "phpstan/phpstan": "^2.1.17",
+                "phpunit/phpunit": "^10.5.46",
+                "squizlabs/php_codesniffer": "^3.13.0"
             },
             "bin": [
                 "bin/carbon"
@@ -3658,7 +3992,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-05-01T19:51:51+00:00"
+            "time": "2025-06-12T10:24:28+00:00"
         },
         {
             "name": "nette/schema",
@@ -7913,16 +8247,16 @@
         },
         {
             "name": "filp/whoops",
-            "version": "2.18.2",
+            "version": "2.18.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "89dabca1490bc77dbcab41c2b20968c7e44bf7c3"
+                "reference": "59a123a3d459c5a23055802237cb317f609867e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/89dabca1490bc77dbcab41c2b20968c7e44bf7c3",
-                "reference": "89dabca1490bc77dbcab41c2b20968c7e44bf7c3",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/59a123a3d459c5a23055802237cb317f609867e5",
+                "reference": "59a123a3d459c5a23055802237cb317f609867e5",
                 "shasum": ""
             },
             "require": {
@@ -7972,7 +8306,7 @@
             ],
             "support": {
                 "issues": "https://github.com/filp/whoops/issues",
-                "source": "https://github.com/filp/whoops/tree/2.18.2"
+                "source": "https://github.com/filp/whoops/tree/2.18.3"
             },
             "funding": [
                 {
@@ -7980,7 +8314,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-06-11T20:42:19+00:00"
+            "time": "2025-06-16T00:02:10+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -10880,12 +11214,17 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "branzia/blueprint": 20,
-        "branzia/shop": 20,
-        "branzia/hookable": 20,
         "branzia/admin": 20,
+        "branzia/blueprint": 20,
+        "branzia/catalog": 20,
+        "branzia/customer": 20,
+        "branzia/hookable": 20,
+        "branzia/payment": 20,
+        "branzia/sales": 20,
+        "branzia/shipping": 20,
+        "branzia/shop": 20,
         "branzia/tax": 20,
-        "branzia/catalog": 20
+        "branzia/blog": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
