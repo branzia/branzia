@@ -22,7 +22,6 @@ jobs:
       run: |
         echo "APP_NAME=Laravel" >> .env
         echo "APP_ENV=production" >> .env
-        echo "APP_KEY=${{ secrets.APP_KEY }}" >> .env
         echo "APP_DEBUG=false" >> .env
         echo "APP_URL=https://yourapp.infinityfreeapp.com" >> .env
         echo "DB_CONNECTION=mysql" >> .env
@@ -30,7 +29,6 @@ jobs:
         echo "DB_PORT=3306" >> .env
         echo "DB_DATABASE=if0_39285485_yourdb" >> .env
         echo "DB_USERNAME=if0_39285485" >> .env
-        echo "DB_PASSWORD=${{ secrets.DB_PASSWORD }}" >> .env
 
     - name: FTP Deploy to InfinityFree
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
