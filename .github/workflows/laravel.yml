@@ -12,7 +12,10 @@ jobs:
       uses: shivammathur/setup-php@v2
       with:
         php-version: '8.2'
-
+    - name: Checkout repository (with submodules)
+      uses: actions/checkout@v4
+      with:
+        submodules: recursive
     - name: Install Composer dependencies
       run: composer install --no-interaction --prefer-dist
 
