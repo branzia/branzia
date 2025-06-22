@@ -8,7 +8,16 @@ jobs:
      
     - name: 🚚 Get latest code
       uses: actions/checkout@v4
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.2'
 
+    - name: Install Composer dependencies
+      run: composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
+
+    - name: Set directory permissions
+      run: chmod -R 775 storage bootstrap/cache
     - name: Generate .env file from secrets
       run: |
         echo "APP_NAME=Laravel" >> .env
