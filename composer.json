@@ -89,7 +89,10 @@
     "repositories": [
         {
             "type": "path",
-            "url": "packages/branzia/*"
+            "url": "packages/branzia/*",
+            "options": {
+                "symlink": false
+            }
         }        
     ]
 }
