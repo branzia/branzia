@@ -16,6 +16,12 @@ jobs:
     - name: Install Composer dependencies
       run: composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
 
+    - name: Dump Autoload
+      run: composer dump-autoload
+
+    - name: Package Discover
+      run: php artisan package:discover
+
     - name: Set directory permissions
       run: chmod -R 775 storage bootstrap/cache
     - name: Generate .env file from secrets

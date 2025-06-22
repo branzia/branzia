@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1c7af404fdc93c6dda1728e89e67973c",
+    "content-hash": "d6aafb3141fbab0581848cb258243fcf",
     "packages": [
         {
             "name": "15web/filament-tree",
@@ -294,7 +294,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/branzia/admin",
-                "reference": "0a280403670eb6d0dc010fec65e741c900c657c8"
+                "reference": "cd0bd554da1389dac8dd331992ec479840972aa5"
             },
             "require": {
                 "filament/filament": "3.3",
@@ -325,6 +325,7 @@
             ],
             "description": "Branzia Admin Package for Laravel",
             "transport-options": {
+                "symlink": false,
                 "relative": true
             }
         },
@@ -334,7 +335,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/branzia/blog",
-                "reference": "b1406b32cecdb6688a511bebe75c5d76e40cbaa3"
+                "reference": "70d8c393492167ecd5104ef05c39c9ed96f91d74"
             },
             "type": "library",
             "extra": {
@@ -360,6 +361,7 @@
                 }
             ],
             "transport-options": {
+                "symlink": false,
                 "relative": true
             }
         },
@@ -369,7 +371,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/branzia/blueprint",
-                "reference": "4ab47b6f5e6d179d055daeac7ab4173df5070821"
+                "reference": "cd3866c37ed596b00022cb12fb16f3886b3580b3"
             },
             "require": {
                 "filament/filament": "3.3",
@@ -400,6 +402,7 @@
             ],
             "description": "Branzia Blueprint package – the foundational layer for Branzia's Laravel packages",
             "transport-options": {
+                "symlink": false,
                 "relative": true
             }
         },
@@ -409,7 +412,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/branzia/catalog",
-                "reference": "4f5865504904737add63d38d84eadca7eb25be16"
+                "reference": "76fb37daaa16527f8506225f2ce77f38dffad147"
             },
             "require": {
                 "15web/filament-tree": "^1.0",
@@ -442,6 +445,7 @@
             ],
             "description": "Branzia Catalog Package for Laravel",
             "transport-options": {
+                "symlink": false,
                 "relative": true
             }
         },
@@ -451,7 +455,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/branzia/customer",
-                "reference": "490ff52a8b6a0c2bbe06ea0a1627f662c72014f8"
+                "reference": "c0bf8f747382f23368db4d1444f7c4cd79c5561b"
             },
             "require": {
                 "branzia/tax": "@dev",
@@ -482,6 +486,7 @@
             ],
             "description": "Branzia Customer Package for Laravel",
             "transport-options": {
+                "symlink": false,
                 "relative": true
             }
         },
@@ -491,7 +496,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/branzia/hookable",
-                "reference": "fedbc8dcb66353198baff83d112837702f9e18f6"
+                "reference": "414ac1fcd190052dfb73e2e696505a1bc9965383"
             },
             "require": {
                 "php": "^8.2"
@@ -515,6 +520,7 @@
             ],
             "description": "Hook system for Laravel packages inspired by Filament and WordPress",
             "transport-options": {
+                "symlink": false,
                 "relative": true
             }
         },
@@ -524,7 +530,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/branzia/payment",
-                "reference": "0b72c30491e3376fa16d1fcf92b44eaf2c1e4b13"
+                "reference": "5effc76ae84613844db112cae001dde3e551892f"
             },
             "require": {
                 "branzia/tax": "@dev",
@@ -555,6 +561,7 @@
             ],
             "description": "Branzia Payment Package for Laravel",
             "transport-options": {
+                "symlink": false,
                 "relative": true
             }
         },
@@ -564,7 +571,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/branzia/sales",
-                "reference": "965a23cb8e8f5b8de4c20b927408665c4059555d"
+                "reference": "8582ab1b78b585204369b28225172887314f4e03"
             },
             "require": {
                 "branzia/admin": "@dev",
@@ -603,6 +610,7 @@
             ],
             "description": "Branzia Sales Package for Laravel",
             "transport-options": {
+                "symlink": false,
                 "relative": true
             }
         },
@@ -612,7 +620,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/branzia/shipping",
-                "reference": "1722ccebcf81fbf736eaf995d0395b9d0d298b4d"
+                "reference": "7dd5a0a59d6ba99adee8cac44e2a93dbc4d05a8c"
             },
             "require": {
                 "branzia/tax": "@dev",
@@ -643,6 +651,7 @@
             ],
             "description": "Branzia Shipping Package for Laravel",
             "transport-options": {
+                "symlink": false,
                 "relative": true
             }
         },
@@ -652,7 +661,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/branzia/shop",
-                "reference": "ddb268e7e0b8097da65580aa2a47c0455d92b7ef"
+                "reference": "d00e3163ce57afc50a0fa96a16647a525abffcb8"
             },
             "require": {
                 "branzia/admin": "@dev",
@@ -692,6 +701,7 @@
             ],
             "description": "Branzia Shop Package for Laravel",
             "transport-options": {
+                "symlink": false,
                 "relative": true
             }
         },
@@ -701,7 +711,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/branzia/tax",
-                "reference": "acc05f3aacc17aef2cc3f80a506d5bec09d5746a"
+                "reference": "27fd0e31b54781d658a1349532119a088fb3259e"
             },
             "require": {
                 "filament/filament": "3.3",
@@ -732,6 +742,7 @@
             ],
             "description": "Branzia Tax Package for Laravel",
             "transport-options": {
+                "symlink": false,
                 "relative": true
             }
         },
