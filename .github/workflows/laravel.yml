@@ -17,12 +17,7 @@ jobs:
       with:
         php-version: '8.2'
 
-    - name: Install Composer dependencies
-      run: composer install --no-dev --no-interaction --prefer-dist
-
-    - name: Set permissions
-      run: chmod -R 777 storage bootstrap/cache
-
+  
     - name: Generate .env file from secrets
       run: |
         echo "APP_NAME=Laravel" >> .env
