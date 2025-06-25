@@ -30,11 +30,15 @@ jobs:
 
     - name: ⚙️ Generate .env file
       run: |
-        echo "APP_NAME=Laravel" >> .env
+        echo "APP_NAME=Branzia" >> .env
         echo "APP_ENV=production" >> .env
         echo "APP_KEY=base64:f00mMyy0P+cbbvWW7HIszbeczHeAZnTpQ613yre/GL4=" >> .env
         echo "APP_DEBUG=false" >> .env
-        echo "APP_URL=https://yourapp.infinityfreeapp.com" >> .env
+        echo "APP_URL=https://branzia.free.nf" >> .env
+        echo "ASSET_URL=https://branzia.free.nf/public" >> .env
+        echo "LOG_CHANNEL=stack" >> .env
+        echo "LOG_DEPRECATIONS_CHANNEL=null" >> .env
+        echo "LOG_LEVEL=debug" >> .env
         echo "DB_CONNECTION=mysql" >> .env
         echo "DB_HOST=sql203.infinityfree.com" >> .env
         echo "DB_PORT=3306" >> .env
@@ -42,14 +46,12 @@ jobs:
         echo "DB_USERNAME=if0_39285485" >> .env
         echo "DB_PASSWORD=y0mXcK2L1ZU" >> .env
 
-    - name: Copy .htaccess from public
-      run: cp public/.htaccess .htaccess
-
-    - name: Prepare for shared hosting (move public files and fix paths)
+    - name: ✅ Create root index.php (wrapper)
       run: |
-        cp public/index.php index.php
-        sed -i "s|__DIR__.'/../vendor|__DIR__.'/vendor|g" index.php
-        sed -i "s|__DIR__.'/../bootstrap|__DIR__.'/bootstrap|g" index.php
+        echo "<?php require __DIR__ . '/public/index.php';" > index.php
+
+    # 👇 Do NOT move public or copy index.php from it
+    # 👇 Keep .htaccess inside /public/ (Apache uses it there)
 
     - name: 📂 Deploy to InfinityFree via FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
