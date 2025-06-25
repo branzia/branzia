@@ -1,33 +1,34 @@
 on: push
 name: 🚀 Deploy website on push
+
 jobs:
   web-deploy:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-     
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v4
-    - name: Setup PHP
-      uses: shivammathur/setup-php@v2
-      with:
-        php-version: '8.2'
-    - name: Checkout repository (with submodules)
+
+    - name: 🚚 Get latest code (with submodules)
       uses: actions/checkout@v4
       with:
         submodules: recursive
-    - name: Install Composer dependencies
+
+    - name: 🧰 Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.2'
+
+    - name: 📦 Install Composer dependencies
       run: composer install --no-interaction --prefer-dist
 
-    - name: Dump Autoload
-      run: composer dump-autoload
+    - name: 🧹 Dump Autoload + Discover
+      run: |
+        composer dump-autoload
+        php artisan package:discover
 
-    - name: Package Discover
-      run: php artisan package:discover
-
-    - name: Set directory permissions
+    - name: 🧷 Set directory permissions
       run: chmod -R 775 storage bootstrap/cache
-    - name: Generate .env file from secrets
+
+    - name: ⚙️ Generate .env file
       run: |
         echo "APP_NAME=Laravel" >> .env
         echo "APP_ENV=production" >> .env
@@ -41,7 +42,17 @@ jobs:
         echo "DB_USERNAME=if0_39285485" >> .env
         echo "DB_PASSWORD=y0mXcK2L1ZU" >> .env
 
-    - name: 📂 Sync files
+    - name: Copy .htaccess from public
+      run: cp public/.htaccess .htaccess
+
+    - name: Prepare for shared hosting (move public files and fix paths)
+      run: |
+        cp public/index.php index.php
+        sed -i "s|__DIR__.'/../vendor|__DIR__.'/vendor|g" index.php
+        sed -i "s|__DIR__.'/../bootstrap|__DIR__.'/bootstrap|g" index.php
+        rm -rf public
+
+    - name: 📂 Deploy to InfinityFree via FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ftpupload.net
@@ -49,4 +60,4 @@ jobs:
         username: if0_39285485
         password: y0mXcK2L1ZU
         server-dir: /htdocs/
-        local-dir: ./     
+        local-dir: ./
