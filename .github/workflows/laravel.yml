@@ -50,7 +50,6 @@ jobs:
         cp public/index.php index.php
         sed -i "s|__DIR__.'/../vendor|__DIR__.'/vendor|g" index.php
         sed -i "s|__DIR__.'/../bootstrap|__DIR__.'/bootstrap|g" index.php
-        rm -rf public
 
     - name: 📂 Deploy to InfinityFree via FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
