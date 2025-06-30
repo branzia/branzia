@@ -2,6 +2,10 @@
 
 Branzia is a modern, developer-first e-commerce solution built using Laravel. It's open-source, cleanly structured, and mobile-ready — giving you everything you need to set up an online store quickly and affordably.
 
+### 🔗 Live Links
+- 🌐 **Website**: [https://branzia.co.in](https://branzia.co.in)
+- 🧪 **Live Demo**: [https://demo.branzia.co.in](https://demo.branzia.co.in)
+
 
 ### What You Get:
 - ✅ Laravel-based backend with RESTful APIs
