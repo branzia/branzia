@@ -22,6 +22,7 @@ jobs:
 
     - name: 🧹 Dump Autoload + Discover
       run: |
+        rm -rf vendor/composer/autoload_*.php
         composer dump-autoload --optimize --no-dev
         php artisan config:clear
         php artisan route:clear
@@ -38,8 +39,8 @@ jobs:
         echo "APP_ENV=production" >> .env
         echo "APP_KEY=base64:f00mMyy0P+cbbvWW7HIszbeczHeAZnTpQ613yre/GL4=" >> .env
         echo "APP_DEBUG=false" >> .env
-        echo "APP_URL=https://branzia.free.nf" >> .env
-        echo "ASSET_URL=https://branzia.free.nf/public" >> .env
+        echo "APP_URL=http://demo.branzia.co.in/" >> .env
+        echo "ASSET_URL=http://demo.branzia.co.in/public" >> .env
         echo "LOG_CHANNEL=stack" >> .env
         echo "LOG_DEPRECATIONS_CHANNEL=null" >> .env
         echo "LOG_LEVEL=debug" >> .env
@@ -64,5 +65,5 @@ jobs:
         port: 21
         username: if0_39285485
         password: y0mXcK2L1ZU
-        server-dir: /htdocs/
+        server-dir: /demo.branzia.co.in/htdocs/
         local-dir: ./

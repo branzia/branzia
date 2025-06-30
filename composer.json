@@ -18,6 +18,7 @@
         "branzia/shop": "@dev",
         "branzia/tax": "@dev",
         "branzia/blog": "@dev",
+        "branzia/wishlist": "@dev",
         "filament/filament": "3.3",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1"
@@ -87,16 +88,9 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "repositories": [
-        { "type": "path", "url": "packages/branzia/admin", "options": { "symlink": false } },
-        { "type": "path", "url": "packages/branzia/blueprint", "options": { "symlink": false } },
-        { "type": "path", "url": "packages/branzia/catalog", "options": { "symlink": false } },
-        { "type": "path", "url": "packages/branzia/customer", "options": { "symlink": false } },
-        { "type": "path", "url": "packages/branzia/hookable", "options": { "symlink": false } },
-        { "type": "path", "url": "packages/branzia/payment", "options": { "symlink": false } },
-        { "type": "path", "url": "packages/branzia/sales", "options": { "symlink": false } },
-        { "type": "path", "url": "packages/branzia/shipping", "options": { "symlink": false } },
-        { "type": "path", "url": "packages/branzia/shop", "options": { "symlink": false } },
-        { "type": "path", "url": "packages/branzia/tax", "options": { "symlink": false } },
-        { "type": "path", "url": "packages/branzia/blog", "options": { "symlink": false } }
+        { 
+            "type": "path", 
+            "url": "packages/branzia/*"  
+        }
     ]
 }
