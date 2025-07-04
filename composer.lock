@@ -409,11 +409,12 @@
             "dist": {
                 "type": "path",
                 "url": "packages/branzia/catalog",
-                "reference": "4fa6c1d25db98732dd6a0a500255b6eacc85a176"
+                "reference": "cd542c6b94748ba177463aa0756ef7f090634de5"
             },
             "require": {
                 "15web/filament-tree": "^1.0",
                 "branzia/tax": "@dev",
+                "dvarilek/filament-table-select": "^2.0.3",
                 "php": "^8.2"
             },
             "type": "library",
@@ -1461,6 +1462,126 @@
                 }
             ],
             "time": "2024-10-09T13:47:03+00:00"
+        },
+        {
+            "name": "dvarilek/filament-table-select",
+            "version": "v2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dvarilek/filament-table-select.git",
+                "reference": "bfa8c9ce7a5d905cd22aca7f35d20a79377e6454"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dvarilek/filament-table-select/zipball/bfa8c9ce7a5d905cd22aca7f35d20a79377e6454",
+                "reference": "bfa8c9ce7a5d905cd22aca7f35d20a79377e6454",
+                "shasum": ""
+            },
+            "require": {
+                "dvarilek/livewire-closure-synthesizer": "^1.1",
+                "filament/filament": "^3.0",
+                "php": "^8.2|^8.3|^8.4",
+                "spatie/laravel-package-tools": "^1.18"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^8.0|^9.0",
+                "pestphp/pest": "^2.31|^3.0.0",
+                "pestphp/pest-plugin-livewire": "^3.0",
+                "phpstan/phpstan": "^2.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Dvarilek\\FilamentTableSelect\\FilamentTableSelectServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dvarilek\\FilamentTableSelect\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Vařílek",
+                    "email": "davan@outlook.cz"
+                }
+            ],
+            "description": "Laravel Filament form component for selecting related records with a table.",
+            "keywords": [
+                "filament",
+                "select",
+                "table"
+            ],
+            "support": {
+                "issues": "https://github.com/dvarilek/filament-table-select/issues",
+                "source": "https://github.com/dvarilek/filament-table-select/tree/v2.0.3"
+            },
+            "time": "2025-07-01T21:49:52+00:00"
+        },
+        {
+            "name": "dvarilek/livewire-closure-synthesizer",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dvarilek/livewire-closure-synthesizer.git",
+                "reference": "1f4fe8c82c401990929c2d01a3268bc97fb5c593"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dvarilek/livewire-closure-synthesizer/zipball/1f4fe8c82c401990929c2d01a3268bc97fb5c593",
+                "reference": "1f4fe8c82c401990929c2d01a3268bc97fb5c593",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/serializable-closure": "^1.1.0 || ^2.0.0",
+                "livewire/livewire": "^3.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^10.2",
+                "pestphp/pest": "^2.31 || ^3.0.0",
+                "phpstan/phpstan": "^2.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Dvarilek\\ClosureSynthesizer\\ClosureSynthesizerServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dvarilek\\ClosureSynthesizer\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Vařílek",
+                    "email": "davan@outlook.cz"
+                }
+            ],
+            "description": "A Closure Synthesizer for Laravel Livewire",
+            "keywords": [
+                "closure",
+                "livewire",
+                "synth",
+                "synthesizer"
+            ],
+            "support": {
+                "issues": "https://github.com/dvarilek/livewire-closure-synthesizer/issues",
+                "source": "https://github.com/dvarilek/livewire-closure-synthesizer/tree/v1.1.0"
+            },
+            "time": "2025-04-19T09:50:07+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -8538,16 +8659,16 @@
         },
         {
             "name": "laravel/pint",
-            "version": "v1.22.1",
+            "version": "v1.23.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/pint.git",
-                "reference": "941d1927c5ca420c22710e98420287169c7bcaf7"
+                "reference": "9ab851dba4faa51a3c3223dd3d07044129021024"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/pint/zipball/941d1927c5ca420c22710e98420287169c7bcaf7",
-                "reference": "941d1927c5ca420c22710e98420287169c7bcaf7",
+                "url": "https://api.github.com/repos/laravel/pint/zipball/9ab851dba4faa51a3c3223dd3d07044129021024",
+                "reference": "9ab851dba4faa51a3c3223dd3d07044129021024",
                 "shasum": ""
             },
             "require": {
@@ -8558,10 +8679,10 @@
                 "php": "^8.2.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.75.0",
-                "illuminate/view": "^11.44.7",
-                "larastan/larastan": "^3.4.0",
-                "laravel-zero/framework": "^11.36.1",
+                "friendsofphp/php-cs-fixer": "^3.76.0",
+                "illuminate/view": "^11.45.1",
+                "larastan/larastan": "^3.5.0",
+                "laravel-zero/framework": "^11.45.0",
                 "mockery/mockery": "^1.6.12",
                 "nunomaduro/termwind": "^2.3.1",
                 "pestphp/pest": "^2.36.0"
@@ -8571,6 +8692,9 @@
             ],
             "type": "project",
             "autoload": {
+                "files": [
+                    "overrides/Runner/Parallel/ProcessFactory.php"
+                ],
                 "psr-4": {
                     "App\\": "app/",
                     "Database\\Seeders\\": "database/seeders/",
@@ -8600,7 +8724,7 @@
                 "issues": "https://github.com/laravel/pint/issues",
                 "source": "https://github.com/laravel/pint"
             },
-            "time": "2025-05-08T08:38:12+00:00"
+            "time": "2025-07-03T10:37:47+00:00"
         },
         {
             "name": "laravel/sail",
