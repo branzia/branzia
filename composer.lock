@@ -294,7 +294,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/branzia/admin",
-                "reference": "0a280403670eb6d0dc010fec65e741c900c657c8"
+                "reference": "c3cfd69a5dc1c2bf3fae009ebab41b3daeffcb1e"
             },
             "require": {
                 "filament/filament": "3.3",
@@ -330,11 +330,11 @@
         },
         {
             "name": "branzia/blog",
-            "version": "dev-main",
+            "version": "dev-bfa323c3e3244dcbe9eadf9ea8baca018034944e",
             "dist": {
                 "type": "path",
                 "url": "packages/branzia/blog",
-                "reference": "b1406b32cecdb6688a511bebe75c5d76e40cbaa3"
+                "reference": "b587ddda3f247aa35f39cb9e24cf1b9a8f5ff8fc"
             },
             "type": "library",
             "extra": {
@@ -365,7 +365,7 @@
         },
         {
             "name": "branzia/blueprint",
-            "version": "dev-main",
+            "version": "dev-9e47cea0638581fb58547b8c5463c51dd9eb80d0",
             "dist": {
                 "type": "path",
                 "url": "packages/branzia/blueprint",
@@ -409,7 +409,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/branzia/catalog",
-                "reference": "cd542c6b94748ba177463aa0756ef7f090634de5"
+                "reference": "f25b56f76e0152c69099c322bf348e0bbc26db9a"
             },
             "require": {
                 "15web/filament-tree": "^1.0",
@@ -448,11 +448,11 @@
         },
         {
             "name": "branzia/customer",
-            "version": "dev-main",
+            "version": "dev-3513e5901c8275094126518299747d604598dc3c",
             "dist": {
                 "type": "path",
                 "url": "packages/branzia/customer",
-                "reference": "490ff52a8b6a0c2bbe06ea0a1627f662c72014f8"
+                "reference": "d019b7f8ba93e7d34533870d5280b7910bfd06dd"
             },
             "require": {
                 "branzia/tax": "@dev",
@@ -488,11 +488,11 @@
         },
         {
             "name": "branzia/hookable",
-            "version": "dev-0a5fc83082bf1eb67b580119111a2f260391226f",
+            "version": "dev-a2390dc13d05b576c6608a8cfd8f21688cd866fd",
             "dist": {
                 "type": "path",
                 "url": "packages/branzia/hookable",
-                "reference": "fedbc8dcb66353198baff83d112837702f9e18f6"
+                "reference": "a6baeb7b66edc420434349c1d300cf541a40da8d"
             },
             "require": {
                 "php": "^8.2"
@@ -521,11 +521,11 @@
         },
         {
             "name": "branzia/payment",
-            "version": "dev-main",
+            "version": "dev-a66bac93da89b9df157fb806b7e77dfa13598aa0",
             "dist": {
                 "type": "path",
                 "url": "packages/branzia/payment",
-                "reference": "0b72c30491e3376fa16d1fcf92b44eaf2c1e4b13"
+                "reference": "e10f1150b2a58614d9dbb3cbc3910300b6944ea5"
             },
             "require": {
                 "branzia/tax": "@dev",
@@ -561,7 +561,7 @@
         },
         {
             "name": "branzia/sales",
-            "version": "dev-main",
+            "version": "dev-c3a4b6edc950fc8a0ae9fd7c84558e0e6a8bba95",
             "dist": {
                 "type": "path",
                 "url": "packages/branzia/sales",
@@ -609,11 +609,11 @@
         },
         {
             "name": "branzia/shipping",
-            "version": "dev-main",
+            "version": "dev-956c6ee6dca4e8e92d48c4df7e4af17d58d91be8",
             "dist": {
                 "type": "path",
                 "url": "packages/branzia/shipping",
-                "reference": "1722ccebcf81fbf736eaf995d0395b9d0d298b4d"
+                "reference": "77bfeb626a4e1382da04a415764fbd2caeb96a1f"
             },
             "require": {
                 "branzia/tax": "@dev",
@@ -649,7 +649,7 @@
         },
         {
             "name": "branzia/shop",
-            "version": "dev-main",
+            "version": "dev-e14287cd291f6e4d87e2204d83e6a0c0e2048959",
             "dist": {
                 "type": "path",
                 "url": "packages/branzia/shop",
@@ -689,7 +689,7 @@
         },
         {
             "name": "branzia/tax",
-            "version": "dev-main",
+            "version": "dev-0a5fc6a0cbb4040acd66bb293c20099959e9a969",
             "dist": {
                 "type": "path",
                 "url": "packages/branzia/tax",
@@ -729,11 +729,11 @@
         },
         {
             "name": "branzia/wishlist",
-            "version": "dev-main",
+            "version": "dev-4c73b7617cf208489dcef5d98ac0398694ec7f56",
             "dist": {
                 "type": "path",
                 "url": "packages/branzia/wishlist",
-                "reference": "13ef43ee56662042c5e544c1ac4478b407a6abc0"
+                "reference": "4c9f10cee0a595b3c1caf3b0a20dce1882ef83f5"
             },
             "require": {
                 "branzia/customer": "@dev",
@@ -8874,16 +8874,16 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.13.1",
+            "version": "1.13.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "1720ddd719e16cf0db4eb1c6eca108031636d46c"
+                "reference": "d25e62e636b0a9b01e3bdebb7823b474876dd829"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/1720ddd719e16cf0db4eb1c6eca108031636d46c",
-                "reference": "1720ddd719e16cf0db4eb1c6eca108031636d46c",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/d25e62e636b0a9b01e3bdebb7823b474876dd829",
+                "reference": "d25e62e636b0a9b01e3bdebb7823b474876dd829",
                 "shasum": ""
             },
             "require": {
@@ -8922,7 +8922,7 @@
             ],
             "support": {
                 "issues": "https://github.com/myclabs/DeepCopy/issues",
-                "source": "https://github.com/myclabs/DeepCopy/tree/1.13.1"
+                "source": "https://github.com/myclabs/DeepCopy/tree/1.13.2"
             },
             "funding": [
                 {
@@ -8930,7 +8930,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-04-29T12:36:36+00:00"
+            "time": "2025-07-04T14:07:32+00:00"
         },
         {
             "name": "nunomaduro/collision",
@@ -11381,6 +11381,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "branzia/admin": 20,
+        "branzia/blog": 20,
         "branzia/blueprint": 20,
         "branzia/catalog": 20,
         "branzia/customer": 20,
@@ -11390,7 +11391,6 @@
         "branzia/shipping": 20,
         "branzia/shop": 20,
         "branzia/tax": 20,
-        "branzia/blog": 20,
         "branzia/wishlist": 20
     },
     "prefer-stable": true,
@@ -11398,6 +11398,6 @@
     "platform": {
         "php": "^8.2"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }
