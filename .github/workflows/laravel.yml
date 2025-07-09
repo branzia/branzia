@@ -72,3 +72,4 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         server-dir: /demo.branzia.co.in/htdocs/
         local-dir: ./
+        include: | .env
