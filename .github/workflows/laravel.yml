@@ -35,9 +35,9 @@ jobs:
         echo "DB_CONNECTION=mysql" >> .env
         echo "DB_HOST=sql203.infinityfree.com" >> .env
         echo "DB_PORT=3306" >> .env
-        echo "DB_DATABASE=if0_39285485_branzia" >> .env
-        echo "DB_USERNAME=if0_39285485" >> .env
-        echo "DB_PASSWORD=y0mXcK2L1ZU" >> .env
+        echo "DB_DATABASE=${{ secrets.DB_DATABASE }}" >> .env
+        echo "DB_USERNAME=${{ secrets.DB_USERNAME }}" >> .env
+        echo "DB_PASSWORD=${{ secrets.DB_PASSWORD }}" >> .env
 
     - name: 📦 Install Composer dependencies
       run: composer install --no-interaction --prefer-dist --no-dev --optimize-autoloader
