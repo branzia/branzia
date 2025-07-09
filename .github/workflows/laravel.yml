@@ -17,23 +17,6 @@ jobs:
       with:
         php-version: '8.2'
 
-    - name: 📦 Install Composer dependencies
-      run: composer install --no-interaction --prefer-dist --no-dev --optimize-autoloader
-
-    - name: 🧹 Dump Autoload + Discover
-      run: |
-        rm -rf vendor/composer/autoload_*.php
-        composer dump-autoload --optimize --no-dev
-        php artisan config:clear
-        php artisan route:clear
-        php artisan cache:clear
-        php artisan view:clear
-        php artisan package:discover
-        php artisan storage:link
-
-    - name: 🧷 Set directory permissions
-      run: chmod -R 775 storage bootstrap/cache
-
     - name: ⚙️ Generate .env file
       run: |
         echo "APP_NAME=Branzia" >> .env
@@ -52,9 +35,26 @@ jobs:
         echo "DB_CONNECTION=mysql" >> .env
         echo "DB_HOST=sql203.infinityfree.com" >> .env
         echo "DB_PORT=3306" >> .env
-        echo "DB_DATABASE=if0_39285485_branzia" >> .env
-        echo "DB_USERNAME=if0_39285485" >> .env
-        echo "DB_PASSWORD=y0mXcK2L1ZU" >> .env
+        echo "DB_DATABASE=${{ secrets.DB_DATABASE }}" >> .env
+        echo "DB_USERNAME=${{ secrets.DB_USERNAME }}" >> .env
+        echo "DB_PASSWORD=${{ secrets.DB_PASSWORD }}" >> .env
+
+    - name: 📦 Install Composer dependencies
+      run: composer install --no-interaction --prefer-dist --no-dev --optimize-autoloader
+
+    - name: 🧹 Dump Autoload + Discover
+      run: |
+        rm -rf vendor/composer/autoload_*.php
+        composer dump-autoload --optimize --no-dev
+        php artisan config:clear
+        php artisan route:clear
+        php artisan cache:clear
+        php artisan view:clear
+        php artisan package:discover
+        php artisan storage:link
+
+    - name: 🧷 Set directory permissions
+      run: chmod -R 775 storage bootstrap/cache
 
     - name: ✅ Create root index.php (wrapper)
       run: |
@@ -66,9 +66,9 @@ jobs:
     - name: 📂 Deploy to InfinityFree via FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: ftpupload.net
-        port: 21
-        username: if0_39285485
-        password: y0mXcK2L1ZU
+        server: ${{ secrets.HOST }}
+        port: ${{ secrets.PORT }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
         server-dir: /demo.branzia.co.in/htdocs/
         local-dir: ./
