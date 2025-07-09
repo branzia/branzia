@@ -29,6 +29,7 @@ jobs:
         php artisan cache:clear
         php artisan view:clear
         php artisan package:discover
+        php artisan storage:link
 
     - name: 🧷 Set directory permissions
       run: chmod -R 775 storage bootstrap/cache
