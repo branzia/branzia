@@ -65,8 +65,8 @@ jobs:
     - name: 📂 Deploy to InfinityFree via FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: ${{ secrets.HOST }}
-        port: ${{ secrets.PORT }}
+        server: ${{ secrets.FTP_HOST }}
+        port: ${{ secrets.FTP_PORT }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         server-dir: /demo.branzia.co.in/htdocs/
