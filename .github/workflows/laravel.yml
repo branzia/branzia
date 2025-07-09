@@ -41,6 +41,7 @@ jobs:
         echo "APP_KEY=base64:f00mMyy0P+cbbvWW7HIszbeczHeAZnTpQ613yre/GL4=" >> .env
         echo "APP_DEBUG=false" >> .env
         echo "APP_URL=http://demo.branzia.co.in" >> .env
+        echo "ASSET_URL=http://demo.branzia.co.in/public" >> .env
         echo "APP_LOCALE=en" >> .env
         echo "APP_FALLBACK_LOCALE=en" >> .env
         echo "APP_FAKER_LOCALE=en_US" >> .env
