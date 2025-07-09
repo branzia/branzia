@@ -4,7 +4,7 @@ Branzia is a modern, developer-first e-commerce solution built using Laravel. It
 
 ### 🔗 Live Links
 - 🌐 **Website**: [https://branzia.co.in](https://branzia.co.in)
-- 🧪 **Live Demo**: [https://demo.branzia.co.in](https://demo.branzia.co.in)
+- 🧪 **Live Demo**: [http://demo.branzia.co.in](http://demo.branzia.co.in)
 
 
 ### What You Get:
