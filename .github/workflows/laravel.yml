@@ -17,6 +17,19 @@ jobs:
       with:
         php-version: '8.2'
 
+    - name: 📦 Install Composer dependencies
+      run: composer install --no-interaction --prefer-dist --no-dev --optimize-autoloader
+
+    - name: 🧹 Dump Autoload + Discover
+      run: |
+        rm -rf vendor/composer/autoload_*.php
+        composer dump-autoload --optimize --no-dev
+        php artisan config:clear
+        php artisan route:clear
+        php artisan cache:clear
+        php artisan view:clear
+        php artisan package:discover
+        php artisan storage:link
     - name: ⚙️ Generate .env file
       run: |
         echo "APP_NAME=Branzia" >> .env
@@ -38,20 +51,6 @@ jobs:
         echo "DB_DATABASE=${{ secrets.DB_DATABASE }}" >> .env
         echo "DB_USERNAME=${{ secrets.DB_USERNAME }}" >> .env
         echo "DB_PASSWORD=${{ secrets.DB_PASSWORD }}" >> .env
-
-    - name: 📦 Install Composer dependencies
-      run: composer install --no-interaction --prefer-dist --no-dev --optimize-autoloader
-
-    - name: 🧹 Dump Autoload + Discover
-      run: |
-        rm -rf vendor/composer/autoload_*.php
-        composer dump-autoload --optimize --no-dev
-        php artisan config:clear
-        php artisan route:clear
-        php artisan cache:clear
-        php artisan view:clear
-        php artisan package:discover
-        php artisan storage:link
 
     - name: 🧷 Set directory permissions
       run: chmod -R 775 storage bootstrap/cache
