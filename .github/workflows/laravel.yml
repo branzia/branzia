@@ -5,6 +5,7 @@ jobs:
   web-deploy:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
+    environment: Infinityfree
     steps:
 
     - name: 🚚 Get latest code (with submodules)
