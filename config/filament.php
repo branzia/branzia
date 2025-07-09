@@ -86,4 +86,11 @@ return [
 
     'livewire_loading_delay' => 'default',
 
+    'public' => [
+        'driver' => 'local',
+        'root' => storage_path('app/public'),  // actual storage path
+        'url' => env('APP_URL') . '/storage',  // public access path
+        'visibility' => 'public',
+    ],
+
 ];
