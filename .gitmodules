@@ -56,3 +56,9 @@
 [submodule "packages/branzia/newsletter"]
 	path = packages/branzia/newsletter
 	url = https://github.com/branzia/newsletter
+[submodule "packages/branzia/tabs"]
+	path = packages/branzia/tabs
+	url = https://github.com/branzia/tabs
+[submodule "packages/branzia/settings"]
+	path = packages/branzia/settings
+	url = https://github.com/branzia/settings
