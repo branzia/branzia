@@ -1,56 +1,74 @@
-# 👋 Welcome to Branzia
+# Branzia
 
-Branzia is an open-source commerce ecosystem built for merchants.
+**Your Shop, Online in Minutes.**
 
-## 🚀 What We're Building
+Branzia helps small businesses — tailors, bakers, florists, gift makers, and more — sell online without the complexity. Merchants get a branded storefront, order management, and payment collection in minutes. No coding. No commission. No hidden fees.
 
-### 🛍️ Branzia Elite
+🌐 [branzia.app](https://branzia.app) &nbsp;·&nbsp; 📱 [Get the app](https://branzia.app/app) &nbsp;·&nbsp; 💬 [Support](https://branzia.app/contact)
 
-A complete self-hosted e-commerce platform for merchants.
+---
 
-Features include:
+## Products
 
-* Product Management
-* Order Management
-* Customer Management
-* Payment Integrations
-* Inventory Management
-* Marketing Tools
-* Merchant Dashboard
+### [Branzia](https://branzia.app) — Hosted SaaS
+The main platform. Merchants sign up, get a store URL instantly, and start accepting orders. Multi-tenant, fully managed, billed monthly with a 7-day free trial.
 
-### 📱 Branzia Mobile
+- Starter · Growth · Pro plans — from ₹99/mo or $3/mo
+- Razorpay (India) and Stripe (International) — zero commission
+- Custom domains, themes, delivery zones, Instagram integration, and more
 
-An open-source mobile application for buyers.
+---
 
-Features include:
+### Branzia Elite — Self-Hosted *(open source)*
+The complete Branzia stack as a single-store, self-hosted CMS. Install on your own server, own your data, no monthly fees.
 
-* Product Discovery
-* Wishlist
-* Secure Checkout
-* Order Tracking
-* Push Notifications
+- All features unlocked — no plan limits
+- MySQL or PostgreSQL, any SMTP provider
+- Same API surface as Branzia hosted — works with all Branzia apps
 
-## 🌱 Our Mission
+---
 
-To help merchants own their business technology through:
+### Branzia Merchant — Android App *(open source)*
+The merchant management app. Manage orders, products, and settings from your phone. Works with both Branzia (hosted) and Branzia Elite.
 
-* Open Source Software
-* Self-Hosting Freedom
-* No Vendor Lock-In
-* Community-Driven Development
+- Instant push notifications for new orders
+- Confirm, reject, and update orders in one tap
+- Also available as a PWA — install directly from [branzia.app/app](https://branzia.app/app)
 
-## 👯 Looking for Contributors
+---
 
-We're looking for developers, designers, testers, and merchants who want to help shape the future of Branzia.
+### Branzia Online Shop — Android App *(open source)*
+Open-source buyer storefront. Take the codebase, brand it for your store, and publish your own app on the Play Store. Works with both Branzia and Branzia Elite via the `/api/shop/*` API.
 
-## 💬 Get Involved
+---
 
-Have ideas, feature requests, or feedback?
+## Who Branzia Is For
 
-Open an issue, start a discussion, or contribute to the project.
+| Segment | What they sell |
+|---------|---------------|
+| 🧵 Tailors | Custom stitching, alterations |
+| 🎂 Bakers | Custom cakes, pastries |
+| 💐 Florists | Bouquets, arrangements, event flowers |
+| 🎁 Gift Makers | Personalised gifts, hampers |
+| 🖨️ Print & Merch | Custom t-shirts, mugs, merchandise |
+| 🧶 Handicrafts | Handmade products, artwork |
+| 👗 Textiles | Readymade and custom clothing |
 
-## ⚡ Current Status
+---
 
-🚧 Branzia is actively under development.
+## Open Source
 
-Building in public. Learning every day. Improving continuously.
+Branzia believes small businesses deserve great tools. Our apps and self-hosted platform are open source so the community can build, customise, and contribute.
+
+- All open-source repos are MIT licensed
+- Issues and PRs are welcome
+- See `CONTRIBUTING.md` in each repo for guidelines
+
+---
+
+## Links
+
+- 🌐 Website — [branzia.app](https://branzia.app)
+- 📖 Docs — [branzia.app/docs](https://branzia.app/docs)
+- 📱 App — [branzia.app/app](https://branzia.app/app)
+- 💰 Pricing — [branzia.app/pricing](https://branzia.app/pricing)
